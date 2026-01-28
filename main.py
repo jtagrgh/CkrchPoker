@@ -1,27 +1,14 @@
 import curses
 
-class Bug:
-    def __init__(self, name: str, code: str):
-        self.name = name
-        self.code = code
 
-caterpiller = Bug('caterpiller', '\U0001F41B')
-ladybug = Bug('ladybug', '\U0001F41E')
-scorpion = Bug('scorpion', '\U0001F982')
-bat = Bug('bat', '\U0001F987')
-mouse = Bug('mouse', '\U0001F42D')
-cricket = Bug('cricket', '\U0001F41C')
-frog = Bug('frog', '\U0001F438')
-spider = Bug('spider', '\U0001F577')
-error = Bug('error', 'X')
 
 class Card:
-    def __init__(self, bug=error, count=0):
+    def __init__(selfk, bug=error, count=0):
         self.bug = bug
         self.count = count
 
 
-class Hand:
+class Hand: 
     def __init__(self, cards=[], hover_idx=0, card_idx=-1, claim_idx=-1):
         self.cards = cards
         self.hover_idx = hover_idx
