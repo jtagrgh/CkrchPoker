@@ -1,12 +1,15 @@
 import socket
-import common
+from communication import Socket
+from messagetypes import Name, Game
+from dacite import from_dict, Config
+from enum import Enum
 
-client = common.Socket()
+
+client = Socket()
 client.connect('localhost', 7778)
 
-client.send(b'Jakob')
+client.send(Name('Jakob'))
 
-data = client.recv()
-msg = common.HandInitMessage()
-msg.decode(data)
+game = client.recv(Game)
 
+print(game)
