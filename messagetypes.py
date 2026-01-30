@@ -31,4 +31,6 @@ class Game:
     opp_board: CardRow
     board: CardRow
     hand: CardRow
+    finished: bool = False
+    won: bool = False
 

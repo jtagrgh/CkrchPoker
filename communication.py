@@ -24,6 +24,9 @@ class Socket:
     def connect(self, host, port):
         self.sock.connect((host, port))
 
+    def close(self):
+        self.sock.close()
+
     def send(self, msg):
         msgstr = json.dumps(asdict(msg))
         data = bytes(msgstr, encoding=encfmt)
